@@ -123,7 +123,8 @@
           ics += `BEGIN:VEVENT\n` +
                  `UID:filatelia-${index}@poste.it\n` +
                  `DTSTAMP:${isoDate}T080000Z\n` +
-                 `DTSTART;VALUE=DATE:${isoDate}\n` +
+                 `DTSTART:${isoDate}T080000Z\n` +
+                 `DTEND:${isoDate}T090000Z\n` +
                  `SUMMARY:${summary}\n` +
                  `DESCRIPTION:${summary}\n` +
                  `END:VEVENT\n`;
