@@ -3,145 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario Filatelico</title>
+  <title>Generatore Calendario .ICS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --poste-yellow: #ffd200;
-      --poste-blue: #0033a0;
-      --gray-light: #f4f4f4;
-      --font-main: 'Helvetica Neue', sans-serif;
+      --primary-yellow: #ffcc00;
+      --primary-blue: #0033a0;
+      --light-gray: #f4f4f4;
+      --dark-gray: #444;
     }
 
     body {
-      font-family: var(--font-main);
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
-      background-color: var(--gray-light);
-      color: #333;
+      padding: 0;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
     }
 
-    header {
-      background-color: var(--poste-yellow);
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 4px solid var(--poste-blue);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: var(--poste-blue);
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: #fff;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-top: 10px solid var(--primary-yellow);
     }
 
-    h2 {
-      color: var(--poste-blue);
+    h1, h2, h3 {
+      color: var(--primary-blue);
+      margin-bottom: 10px;
     }
 
-    .section {
-      margin-bottom: 2rem;
+    h1 {
+      background-color: var(--primary-yellow);
+      padding: 10px;
+      border-radius: 6px;
+      color: #000;
     }
 
-    input[type="file"] {
-      padding: 0.5rem;
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 20px;
+    }
+
+    input[type="text"],
+    input[type="datetime-local"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: monospace;
+      box-sizing: border-box;
     }
 
     button {
-      background-color: var(--poste-blue);
+      background-color: var(--primary-blue);
       color: white;
+      padding: 12px 20px;
       border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
       border-radius: 6px;
+      margin-top: 20px;
+      font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #00257c;
+      background-color: #00257e;
     }
 
-    .status {
-      margin-top: 1rem;
-      font-style: italic;
-      color: #666;
+    button:active::after {
+      content: ' Fatto!';
+      color: var(--primary-yellow);
+      margin-left: 8px;
     }
 
-    @media (max-width: 600px) {
-      main { margin: 1rem; }
+    #icsOutput {
+      margin-top: 20px;
+      height: 180px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--light-gray);
+    }
+
+    #downloadLink {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--primary-yellow);
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Calendario Filatelico</h1>
-  </header>
-  <main>
+  <div class="container">
+    <h1>Strumento di generazione calendario</h1>
+
     <div class="section">
-      <h2>Importa file Excel</h2>
+      <h2>1. Conversione da file Excel</h2>
+      <label for="excelFile">Carica file Excel (.xlsx)</label>
       <input type="file" id="excelFile" accept=".xlsx">
-      <button onclick="generaICS()">Genera file .ics</button>
-      <div class="status" id="status"></div>
+      <button onclick="convertiExcel()">📤 Converti in ICS</button>
+      <a id="downloadLink" style="display:none;">📥 Scarica calendario.ics</a>
     </div>
-  </main>
+
+    <div class="section">
+      <h2>2. Crea un evento manuale</h2>
+      <label for="summary">Titolo</label>
+      <input type="text" id="summary">
+
+      <label for="description">Descrizione</label>
+      <input type="text" id="description">
+
+      <label for="start">Data e ora inizio</label>
+      <input type="datetime-local" id="start">
+
+      <label for="end">Data e ora fine</label>
+      <input type="datetime-local" id="end">
+
+      <label for="uid">UID (lascia vuoto per generarlo automaticamente)</label>
+      <input type="text" id="uid">
+
+      <button onclick="generaEventoManuale()">➕ Genera Evento</button>
+
+      <textarea id="icsOutput" readonly></textarea>
+      <button onclick="copiaTesto()">📋 Copia negli appunti</button><span id="copiedMsg"></span>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script>
-    function generaICS() {
-      const input = document.getElementById('excelFile');
-      const status = document.getElementById('status');
+    function pad(n) { return n < 10 ? '0' + n : n; }
 
-      if (!input.files.length) {
-        status.textContent = "Seleziona un file Excel prima.";
-        return;
-      }
+    function toICSDate(dateStr) {
+      const date = new Date(dateStr);
+      return `${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}T${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}${pad(date.getUTCSeconds())}Z`;
+    }
 
-      status.textContent = "Caricamento in corso...";
+    function generaEventoManuale() {
+      const summary = document.getElementById('summary').value.trim();
+      const description = document.getElementById('description').value.trim();
+      const start = document.getElementById('start').value;
+      const end = document.getElementById('end').value;
+      let uid = document.getElementById('uid').value.trim();
+      if (!summary || !start || !end) return alert("Compila tutti i campi obbligatori");
+      if (!uid) uid = `event-${Date.now()}-${Math.random().toString(36).substring(2, 8)}@ical.local`;
+      const evento = [
+        "BEGIN:VEVENT",
+        `UID:${uid}`,
+        `DTSTAMP:${toICSDate(new Date().toISOString())}`,
+        `DTSTART:${toICSDate(start)}`,
+        `DTEND:${toICSDate(end)}`,
+        `SUMMARY:${summary}`,
+        `DESCRIPTION:${description}`,
+        "END:VEVENT"
+      ].join("\n");
+      document.getElementById('icsOutput').value = evento;
+    }
 
+    function copiaTesto() {
+      const textarea = document.getElementById('icsOutput');
+      textarea.select();
+      document.execCommand('copy');
+      document.getElementById('copiedMsg').textContent = " Copiato!";
+      setTimeout(() => document.getElementById('copiedMsg').textContent = '', 2000);
+    }
+
+    function convertiExcel() {
+      const fileInput = document.getElementById('excelFile');
+      if (!fileInput.files.length) return alert("Carica un file Excel.");
       const reader = new FileReader();
       reader.onload = function(e) {
         const data = new Uint8Array(e.target.result);
         const workbook = XLSX.read(data, {type: 'array'});
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-        const json = XLSX.utils.sheet_to_json(sheet);
-
-        let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Poste Italiane//Calendario Filatelico//IT\n";
-
-        json.forEach((row, index) => {
-          const summary = row["Argomento"];
-          const dateParts = row["Data"].split("/");
-          const isoDate = dateParts[2] + dateParts[1].padStart(2,'0') + dateParts[0].padStart(2,'0');
-
-          ics += `BEGIN:VEVENT\n` +
-                 `UID:filatelia-${index}@poste.it\n` +
-                 `DTSTAMP:${isoDate}T080000Z\n` +
-                 `DTSTART:${isoDate}T080000Z\n` +
-                 `DTEND:${isoDate}T090000Z\n` +
-                 `SUMMARY:${summary}\n` +
-                 `DESCRIPTION:${summary}\n` +
-                 `END:VEVENT\n`;
-        });
-
-        ics += "END:VCALENDAR";
-
-        const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = "Calendario_filatelico.ics";
-        link.click();
-
-        status.textContent = "File .ics generato correttamente!";
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const json = XLSX.utils.sheet_to_json(sheet, {header: 1});
+        const eventi = [];
+        for (let i = 1; i < json.length; i++) {
+          const r = json[i];
+          if (!r[0]) continue;
+          const uid = `event-${Date.now()}-${Math.random().toString(36).substring(2, 8)}@ical.local`;
+          eventi.push([
+            "BEGIN:VEVENT",
+            `UID:${uid}`,
+            `DTSTAMP:${toICSDate(new Date().toISOString())}`,
+            `DTSTART:${toICSDate(r[0])}`,
+            `DTEND:${toICSDate(r[1])}`,
+            `SUMMARY:${r[2] || ''}`,
+            `DESCRIPTION:${r[3] || ''}`,
+            "END:VEVENT"
+          ].join("\n"));
+        }
+        const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", ...eventi, "END:VCALENDAR"].join("\n");
+        const blob = new Blob([ics], {type: 'text/calendar'});
+        const url = URL.createObjectURL(blob);
+        const link = document.getElementById('downloadLink');
+        link.href = url;
+        link.download = "calendario.ics";
+        link.style.display = 'inline-block';
+        link.textContent = "📥 Scarica calendario.ics";
       };
-
-      reader.readAsArrayBuffer(input.files[0]);
+      reader.readAsArrayBuffer(fileInput.files[0]);
     }
   </script>
 </body>
