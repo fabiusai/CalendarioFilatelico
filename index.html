@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Filatelico</title>
+  <style>
+    :root {
+      --poste-yellow: #ffd200;
+      --poste-blue: #0033a0;
+      --gray-light: #f4f4f4;
+      --font-main: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-main);
+      margin: 0;
+      background-color: var(--gray-light);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--poste-yellow);
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--poste-blue);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--poste-blue);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--poste-blue);
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    input[type="file"] {
+      padding: 0.5rem;
+    }
+
+    button {
+      background-color: var(--poste-blue);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #00257c;
+    }
+
+    .status {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      main { margin: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Calendario Filatelico</h1>
+  </header>
+  <main>
+    <div class="section">
+      <h2>Importa file Excel</h2>
+      <input type="file" id="excelFile" accept=".xlsx">
+      <button onclick="generaICS()">Genera file .ics</button>
+      <div class="status" id="status"></div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script>
+    function generaICS() {
+      const input = document.getElementById('excelFile');
+      const status = document.getElementById('status');
+
+      if (!input.files.length) {
+        status.textContent = "Seleziona un file Excel prima.";
+        return;
+      }
+
+      status.textContent = "Caricamento in corso...";
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, {type: 'array'});
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const json = XLSX.utils.sheet_to_json(sheet);
+
+        let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Poste Italiane//Calendario Filatelico//IT\n";
+
+        json.forEach((row, index) => {
+          const summary = row["Argomento"];
+          const dateParts = row["Data"].split("/");
+          const isoDate = dateParts[2] + dateParts[1].padStart(2,'0') + dateParts[0].padStart(2,'0');
+
+          ics += `BEGIN:VEVENT\n` +
+                 `UID:filatelia-${index}@poste.it\n` +
+                 `DTSTAMP:${isoDate}T080000Z\n` +
+                 `DTSTART;VALUE=DATE:${isoDate}\n` +
+                 `SUMMARY:${summary}\n` +
+                 `DESCRIPTION:${summary}\n` +
+                 `END:VEVENT\n`;
+        });
+
+        ics += "END:VCALENDAR";
+
+        const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = "Calendario_filatelico.ics";
+        link.click();
+
+        status.textContent = "File .ics generato correttamente!";
+      };
+
+      reader.readAsArrayBuffer(input.files[0]);
+    }
+  </script>
+</body>
+</html>
