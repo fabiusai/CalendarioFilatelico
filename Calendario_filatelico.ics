@@ -464,4 +464,12 @@ DTEND:20250929T090000Z
 SUMMARY:Francobollo ordinario - Giornata Mondiale del Cuore
 DESCRIPTION:Francobollo ordinario - Giornata Mondiale del Cuore
 END:VEVENT
+BEGIN:VEVENT
+UID:event-1749476106779-77anjw@ical.local
+DTSTAMP:20250609T080000Z
+DTSTART:20250610T080000Z
+DTEND:20250610T080000Z
+SUMMARY:Prova aggiornamento
+DESCRIPTION:Prova aggiornamento
+END:VEVENT
 END:VCALENDAR
