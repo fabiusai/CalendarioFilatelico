@@ -12,104 +12,23 @@
       --light-gray: #f9f9f9;
       --dark-gray: #333;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: var(--light-gray);
-      margin: 0;
-      padding: 0;
-      color: var(--dark-gray);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: #fff;
-      border-radius: 12px;
-      border-top: 8px solid var(--primary-yellow);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    h1 {
-      color: var(--primary-blue);
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      color: var(--primary-blue);
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    label {
-      font-weight: 600;
-      display: block;
-      margin-top: 20px;
-    }
-
-    input[type="text"],
-    input[type="datetime-local"],
-    input[type="file"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: monospace;
-    }
-
-    button {
-      background-color: var(--primary-blue);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      margin-top: 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    button:hover {
-      background-color: #00257e;
-      transform: scale(1.02);
-    }
-
-    button:active::after {
-      content: ' Fatto!';
-      color: var(--primary-yellow);
-      margin-left: 8px;
-    }
-
-    #downloadLink {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: var(--primary-yellow);
-      color: #000;
-      padding: 10px 15px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-
-    .section {
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid var(--light-gray);
-    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Open Sans', sans-serif; background-color: var(--light-gray); margin: 0; padding: 0; color: var(--dark-gray); }
+    .container { max-width: 900px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 12px; border-top: 8px solid var(--primary-yellow); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    h1 { color: var(--primary-blue); font-size: 28px; margin-bottom: 20px; }
+    h2 { color: var(--primary-blue); margin-top: 40px; margin-bottom: 10px; font-size: 22px; }
+    label { font-weight: 600; display: block; margin-top: 20px; }
+    input[type="text"], input[type="datetime-local"], input[type="file"], textarea { width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #ccc; border-radius: 6px; font-family: monospace; }
+    button { background-color: var(--primary-blue); color: white; padding: 12px 20px; border: none; border-radius: 6px; margin-top: 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; }
+    button:hover { background-color: #00257e; transform: scale(1.02); }
+    button:active::after { content: ' Fatto!'; color: var(--primary-yellow); margin-left: 8px; }
+    #downloadLink { display: inline-block; margin-top: 15px; background-color: var(--primary-yellow); color: #000; padding: 10px 15px; border-radius: 6px; text-decoration: none; }
+    .section { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid var(--light-gray); }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Generatore Calendario Emissioni</h1>
-
     <div class="section">
       <h2>Importa file Excel</h2>
       <label for="excelFile">Seleziona un file con colonne "Argomento" e "Data"</label>
@@ -117,26 +36,19 @@
       <button onclick="convertiExcel(this)">📤 Genera file .ics</button>
       <a id="downloadLink" style="display:none;">📥 Scarica calendario.ics</a>
     </div>
-
     <div class="section">
       <h2>Oppure crea un evento singolo</h2>
       <label for="summary">Titolo</label>
       <input type="text" id="summary" placeholder="Titolo dell'evento">
-
       <label for="description">Descrizione</label>
       <input type="text" id="description" placeholder="Descrizione dell'evento">
-
       <label for="start">Data e ora di inizio</label>
       <input type="datetime-local" id="start">
-
       <label for="end">Data e ora di fine</label>
       <input type="datetime-local" id="end">
-
       <label for="uid">UID (opzionale)</label>
       <input type="text" id="uid" placeholder="Lascia vuoto per generarlo automaticamente">
-
       <button onclick="generaEventoManuale()">➕ Genera Evento</button>
-
       <textarea id="icsOutput" readonly></textarea>
       <button onclick="copiaTesto()">📋 Copia negli appunti</button><span id="copiedMsg"></span>
     </div>
@@ -145,25 +57,52 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script>
     function pad(n) { return n < 10 ? '0' + n : n; }
-
-    function excelDateToJSDate(excelDate) {
-      if (typeof excelDate === 'number') {
-        const utc_days = Math.floor(excelDate - 25569);
-        const utc_value = utc_days * 86400;
-        return new Date(utc_value * 1000);
-      } else {
-        return new Date(excelDate);
-      }
+    
+    function toICSDate(dateObj, hour = 8, minute = 0) {
+      const year = dateObj.getUTCFullYear();
+      const month = dateObj.getUTCMonth() + 1;
+      const day = dateObj.getUTCDate();
+      return `${year}${pad(month)}${pad(day)}T${pad(hour)}${pad(minute)}00Z`;
+    }
+    
+    function localDateToICS(dateObj) {
+        return dateObj.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
     }
 
-    function toICSDateFromLocal(dateObj, hour = 8, minute = 0) {
-      const d = new Date(dateObj);
-      d.setUTCHours(hour);
-      d.setUTCMinutes(minute);
-      d.setUTCSeconds(0);
-      return `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}${pad(d.getUTCSeconds())}Z`;
+    /**
+     * NUOVA FUNZIONE DI PARSING MANUALE E ROBUSTA
+     * Converte un valore dalla cella di Excel (che può essere un numero seriale o una stringa)
+     * in un oggetto Date valido.
+     */
+    function parseExcelDate(excelValue) {
+        if (typeof excelValue === 'number') {
+            // È un numero seriale di Excel. Lo convertiamo.
+            const utc_days = Math.floor(excelValue - 25569);
+            const utc_value = utc_days * 86400;
+            const date_info = new Date(utc_value * 1000);
+            return new Date(Date.UTC(date_info.getUTCFullYear(), date_info.getUTCMonth(), date_info.getUTCDate()));
+        }
+        if (typeof excelValue === 'string') {
+            // È una stringa. Proviamo a interpretarla nel formato GG/MM/AAAA o simili.
+            const parts = excelValue.match(/(\d+)/g);
+            if (!parts || parts.length < 3) return null;
+            let day = parseInt(parts[0], 10);
+            let month = parseInt(parts[1], 10) - 1; // Mese in JS è 0-indexed
+            let year = parseInt(parts[2], 10);
+            if (year < 100) year += 2000;
+            return new Date(Date.UTC(year, month, day));
+        }
+        // Se è già un oggetto Date (caso improbabile ma sicuro), lo restituiamo.
+        if (excelValue instanceof Date) {
+            return excelValue;
+        }
+        return null; // Formato non riconosciuto
     }
-
+    
+    /**
+     * VERSIONE DEFINITIVA: Non usa `cellDates: true`, ma usa la nostra funzione di parsing
+     * manuale `parseExcelDate` per la massima affidabilità.
+     */
     function convertiExcel(button) {
       const fileInput = document.getElementById('excelFile');
       if (!fileInput.files.length) return alert("Carica un file Excel.");
@@ -174,69 +113,114 @@
 
       const reader = new FileReader();
       reader.onload = function(e) {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, { type: 'array' });
-        const sheet = workbook.Sheets[workbook.SheetNames[0]];
-        const json = XLSX.utils.sheet_to_json(sheet);
+        try {
+          const data = new Uint8Array(e.target.result);
+          // Leggiamo senza `cellDates: true` per avere il controllo completo.
+          const workbook = XLSX.read(data, { type: 'array' }); 
+          const sheet = workbook.Sheets[workbook.SheetNames[0]];
+          const json = XLSX.utils.sheet_to_json(sheet);
 
-        const eventi = json.map((r, index) => {
-          if (!r["Data"] || !r["Argomento"]) return null;
-          const data = excelDateToJSDate(r["Data"]);
-          const uid = `event-${Date.now()}-${index}@ical.local`;
-          return [
-            "BEGIN:VEVENT",
-            `UID:${uid}`,
-            `DTSTAMP:${toICSDateFromLocal(data, 8, 0)}`,
-            `DTSTART:${toICSDateFromLocal(data, 8, 0)}`,
-            `DTEND:${toICSDateFromLocal(data, 9, 0)}`,
-            `SUMMARY:${r["Argomento"]}`,
-            `DESCRIPTION:${r["Argomento"]}`,
-            "END:VEVENT"
-          ].join("\n");
-        }).filter(e => e !== null);
+          if (json.length === 0) {
+            alert("Il file Excel sembra essere vuoto.");
+            button.textContent = originalText;
+            button.disabled = false;
+            return;
+          }
 
-        const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", ...eventi, "END:VCALENDAR"].join("\n");
-        const blob = new Blob([ics], { type: 'text/calendar' });
-        const url = URL.createObjectURL(blob);
-        const link = document.getElementById('downloadLink');
-        link.href = url;
-        link.download = "calendario_emissioni.ics";
-        link.style.display = 'inline-block';
-        link.textContent = "📥 Scarica calendario.ics";
+          const headers = Object.keys(json[0]);
+          const argomentoHeader = headers.find(h => h.toLowerCase().trim() === 'argomento');
+          const dataHeader = headers.find(h => h.toLowerCase().trim() === 'data');
 
-        button.textContent = originalText + " ✓";
-        button.disabled = false;
+          if (!argomentoHeader || !dataHeader) {
+            alert("Impossibile trovare le colonne 'Argomento' e/o 'Data' nel file Excel. Controlla che le intestazioni siano scritte correttamente.");
+            button.textContent = originalText;
+            button.disabled = false;
+            return;
+          }
+
+          const eventi = json.map((r, index) => {
+            const argomento = r[argomentoHeader];
+            const valoreDataGrezzo = r[dataHeader];
+
+            // Usiamo la nostra funzione di parsing manuale e robusta
+            const dataEvento = parseExcelDate(valoreDataGrezzo);
+
+            if (!dataEvento || !argomento) {
+              console.warn("Riga saltata per dati mancanti o non validi:", r);
+              return null;
+            }
+            
+            const uid = `event-excel-${Date.now()}-${index}@ical.local`;
+            const summary = String(argomento).trim();
+            
+            return [
+              "BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${localDateToICS(new Date())}`,
+              `DTSTART:${toICSDate(dataEvento, 8, 0)}`, `DTEND:${toICSDate(dataEvento, 9, 0)}`,
+              `SUMMARY:${summary}`, `DESCRIPTION:${summary}`, "END:VEVENT"
+            ].join("\n");
+          }).filter(e => e !== null);
+
+          if (eventi.length === 0) {
+            alert("Nessun evento valido trovato. Controlla che le colonne 'Argomento' e 'Data' contengano dati corretti in ogni riga.");
+            button.textContent = originalText;
+            button.disabled = false;
+            return;
+          }
+
+          const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//WebApp//Generatore Calendario//IT", ...eventi, "END:VCALENDAR"].join("\n");
+          const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const link = document.getElementById('downloadLink');
+          link.href = url;
+          link.download = "calendario_emissioni.ics";
+          link.style.display = 'inline-block';
+          link.textContent = "📥 Scarica calendario.ics";
+
+          button.textContent = originalText + " ✓";
+        } catch (error) {
+          console.error("Errore durante l'elaborazione del file Excel:", error);
+          alert("Si è verificato un errore durante la lettura del file. Assicurati che sia un file .xlsx valido.");
+          button.textContent = originalText;
+        } finally {
+            button.disabled = false;
+        }
       };
       reader.readAsArrayBuffer(fileInput.files[0]);
     }
 
     function generaEventoManuale() {
       const summary = document.getElementById('summary').value.trim();
-      const description = document.getElementById('description').value.trim();
-      const start = document.getElementById('start').value;
-      const end = document.getElementById('end').value;
+      const description = document.getElementById('description').value.trim() || summary;
+      const startValue = document.getElementById('start').value;
+      const endValue = document.getElementById('end').value;
       let uid = document.getElementById('uid').value.trim();
-      if (!summary || !start || !end) return alert("Compila tutti i campi obbligatori.");
-      if (!uid) uid = `event-${Date.now()}-${Math.random().toString(36).substring(2, 8)}@ical.local`;
+      if (!summary || !startValue || !endValue) { return alert("Compila tutti i campi obbligatori (Titolo, Inizio, Fine)."); }
+      const startDate = new Date(startValue);
+      const endDate = new Date(endValue);
+      if (isNaN(startDate) || isNaN(endDate)) { return alert("Le date inserite non sono valide."); }
+      if (!uid) uid = `event-manual-${Date.now()}@ical.local`;
       const evento = [
-        "BEGIN:VEVENT",
-        `UID:${uid}`,
-        `DTSTAMP:${toICSDateFromLocal(new Date())}`,
-        `DTSTART:${toICSDateFromLocal(new Date(start))}`,
-        `DTEND:${toICSDateFromLocal(new Date(end))}`,
-        `SUMMARY:${summary}`,
-        `DESCRIPTION:${description}`,
-        "END:VEVENT"
+        "BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${localDateToICS(new Date())}`,
+        `DTSTART:${localDateToICS(startDate)}`, `DTEND:${localDateToICS(endDate)}`,
+        `SUMMARY:${summary}`, `DESCRIPTION:${description}`, "END:VEVENT"
       ].join("\n");
       document.getElementById('icsOutput').value = evento;
     }
 
     function copiaTesto() {
       const textarea = document.getElementById('icsOutput');
+      if (!textarea.value) return;
       textarea.select();
-      document.execCommand('copy');
-      document.getElementById('copiedMsg').textContent = " Copiato!";
-      setTimeout(() => document.getElementById('copiedMsg').textContent = '', 2000);
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(textarea.value).then(() => {
+          document.getElementById('copiedMsg').textContent = " Copiato!";
+          setTimeout(() => document.getElementById('copiedMsg').textContent = '', 2000);
+        });
+      } else {
+        document.execCommand('copy');
+        document.getElementById('copiedMsg').textContent = " Copiato!";
+        setTimeout(() => document.getElementById('copiedMsg').textContent = '', 2000);
+      }
     }
   </script>
 </body>
