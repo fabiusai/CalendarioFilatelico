@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizzatore Calendario Filatelico</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
+        h1 { color: #333; }
+        .controls { margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #007bff; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        .date-col { white-space: nowrap; font-weight: bold; color: #555; }
+    </style>
+</head>
+<body>
+
+    <h1>📅 Calendario Filatelico</h1>
+
+    <div class="controls">
+        <p><strong>Metodo 1:</strong> Prova a caricare direttamente dal link (potrebbe non funzionare se il server blocca le richieste esterne).</p>
+        <button onclick="loadFromUrl()">Carica da URL</button>
+        <hr>
+        <p><strong>Metodo 2:</strong> Scarica il file <code>.ics</code> e caricalo qui.</p>
+        <input type="file" id="fileInput" accept=".ics">
+    </div>
+
+    <table id="calTable">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Evento</th>
+                <th>Descrizione</th>
+            </tr>
+        </thead>
+        <tbody id="calBody">
+            <tr><td colspan="3">Nessun dato caricato.</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        const ICS_URL = 'https://fabiusai.github.io/CalendarioFilatelico/Calendario_filatelico.ics';
+
+        // Funzione per analizzare il testo ICS
+        function parseICS(icsData) {
+            const events = [];
+            const lines = icsData.split(/\r\n|\n|\r/);
+            let currentEvent = null;
+
+            lines.forEach(line => {
+                if (line.startsWith('BEGIN:VEVENT')) {
+                    currentEvent = {};
+                } else if (line.startsWith('END:VEVENT')) {
+                    if (currentEvent) events.push(currentEvent);
+                    currentEvent = null;
+                } else if (currentEvent) {
+                    if (line.startsWith('SUMMARY:')) currentEvent.summary = line.substring(8);
+                    if (line.startsWith('DTSTART;VALUE=DATE:')) currentEvent.date = line.substring(19);
+                    if (line.startsWith('DTSTART:')) currentEvent.date = line.substring(8, 16); // Fallback standard
+                    if (line.startsWith('DESCRIPTION:')) currentEvent.desc = line.substring(12);
+                }
+            });
+
+            // Ordina per data
+            events.sort((a, b) => (a.date > b.date) ? 1 : -1);
+            renderTable(events);
+        }
+
+        function renderTable(events) {
+            const tbody = document.getElementById('calBody');
+            tbody.innerHTML = '';
+            
+            if (events.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3">Nessun evento trovato.</td></tr>';
+                return;
+            }
+
+            events.forEach(evt => {
+                const row = document.createElement('tr');
+                
+                // Formatta la data (YYYYMMDD -> DD/MM/YYYY)
+                let dateStr = evt.date || "";
+                if (dateStr.length === 8) {
+                    dateStr = `${dateStr.substring(6,8)}/${dateStr.substring(4,6)}/${dateStr.substring(0,4)}`;
+                }
+
+                row.innerHTML = `
+                    <td class="date-col">${dateStr}</td>
+                    <td>${evt.summary || 'Senza titolo'}</td>
+                    <td>${evt.desc || ''}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        async function loadFromUrl() {
+            try {
+                const response = await fetch(ICS_URL);
+                if (!response.ok) throw new Error("Errore nel download");
+                const text = await response.text();
+                parseICS(text);
+            } catch (err) {
+                alert("Impossibile caricare direttamente (probabilmente blocco CORS). Scarica il file e usa il pulsante 'Scegli file'.");
+            }
+        }
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                parseICS(e.target.result);
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
