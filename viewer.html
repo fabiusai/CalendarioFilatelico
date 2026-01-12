@@ -5,14 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizzatore Calendario Filatelico</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
-        h1 { color: #333; }
-        .controls { margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #007bff; color: white; }
-        tr:hover { background-color: #f1f1f1; }
-        .date-col { white-space: nowrap; font-weight: bold; color: #555; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: #f4f4f9; color: #333; }
+        h1 { text-align: center; color: #444; }
+        
+        .controls { 
+            max-width: 800px; 
+            margin: 0 auto 20px auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff; color: white; border: none; padding: 10px 20px; 
+            border-radius: 5px; cursor: pointer; font-size: 16px; margin-bottom: 10px;
+        }
+        button:hover { background-color: #0056b3; }
+
+        table { 
+            width: 100%; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            border-collapse: collapse; 
+            background: white; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #343a40; color: white; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background-color: #f9f9f9; }
+
+        /* Stili per le colonne */
+        .col-date { width: 30%; white-space: nowrap; }
+        .col-event { width: 70%; }
+
+        /* Stili festività e weekend */
+        .is-holiday, .is-sunday {
+            color: #d9534f; /* Rosso */
+            font-weight: bold;
+            background-color: #fff5f5;
+        }
+        .is-saturday {
+            color: #e67e22; /* Arancione */
+            font-weight: bold;
+        }
+        
+        .holiday-name {
+            display: block;
+            font-size: 0.8em;
+            color: #d9534f;
+            font-style: italic;
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body>
@@ -20,30 +69,84 @@
     <h1>📅 Calendario Filatelico</h1>
 
     <div class="controls">
-        <p><strong>Metodo 1:</strong> Prova a caricare direttamente dal link (potrebbe non funzionare se il server blocca le richieste esterne).</p>
-        <button onclick="loadFromUrl()">Carica da URL</button>
-        <hr>
-        <p><strong>Metodo 2:</strong> Scarica il file <code>.ics</code> e caricalo qui.</p>
+        <p>Carica il file <code>.ics</code> (scaricato dal link originale) per visualizzarlo:</p>
         <input type="file" id="fileInput" accept=".ics">
+        <p style="margin-top:15px; font-size: 0.9em; color: #666;">
+            <em>Oppure prova il caricamento diretto (potrebbe essere bloccato dal browser):</em>
+        </p>
+        <button onclick="loadFromUrl()">Carica da URL</button>
     </div>
 
     <table id="calTable">
         <thead>
             <tr>
-                <th>Data</th>
-                <th>Evento</th>
-                <th>Descrizione</th>
+                <th class="col-date">Data</th>
+                <th class="col-event">Evento</th>
             </tr>
         </thead>
         <tbody id="calBody">
-            <tr><td colspan="3">Nessun dato caricato.</td></tr>
+            <tr><td colspan="2" style="text-align:center;">Nessun dato caricato.</td></tr>
         </tbody>
     </table>
 
     <script>
         const ICS_URL = 'https://fabiusai.github.io/CalendarioFilatelico/Calendario_filatelico.ics';
 
-        // Funzione per analizzare il testo ICS
+        // Festività fisse italiane
+        const fixedHolidays = {
+            '01-01': 'Capodanno',
+            '01-06': 'Epifania',
+            '04-25': 'Festa della Liberazione',
+            '05-01': 'Festa del Lavoro',
+            '06-02': 'Festa della Repubblica',
+            '08-15': 'Ferragosto',
+            '11-01': 'Ognissanti',
+            '12-08': 'Immacolata',
+            '12-25': 'Natale',
+            '12-26': 'Santo Stefano'
+        };
+
+        // Calcolo Pasqua e Pasquetta
+        function getEasterDate(year) {
+            const f = Math.floor,
+                G = year % 19,
+                C = f(year / 100),
+                H = (C - f(C / 4) - f((8 * C + 13) / 25) + 19 * G + 15) % 30,
+                I = H - f(H / 28) * (1 - f(29 / (H + 1)) * f((21 - G) / 11)),
+                J = (year + f(year / 4) + I + 2 - C + f(C / 4)) % 7,
+                L = I - J,
+                month = 3 + f((L + 40) / 44),
+                day = L + 28 - 31 * f(month / 4);
+            return { month, day };
+        }
+
+        function checkItalianHoliday(dateObj) {
+            const day = dateObj.getDate();
+            const month = dateObj.getMonth() + 1; // 0-based
+            const year = dateObj.getFullYear();
+            
+            // Format MM-DD per confronto
+            const key = `${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            
+            // Controllo fisse
+            if (fixedHolidays[key]) return fixedHolidays[key];
+
+            // Controllo Pasqua
+            const easter = getEasterDate(year);
+            if (month === easter.month && day === easter.day) return 'Pasqua';
+
+            // Controllo Pasquetta (Giorno dopo Pasqua)
+            const easterDate = new Date(year, easter.month - 1, easter.day);
+            const pasquettaDate = new Date(easterDate);
+            pasquettaDate.setDate(easterDate.getDate() + 1);
+            
+            if (month === (pasquettaDate.getMonth() + 1) && day === pasquettaDate.getDate()) {
+                return 'Lunedì dell\'Angelo';
+            }
+
+            return null;
+        }
+
         function parseICS(icsData) {
             const events = [];
             const lines = icsData.split(/\r\n|\n|\r/);
@@ -53,18 +156,22 @@
                 if (line.startsWith('BEGIN:VEVENT')) {
                     currentEvent = {};
                 } else if (line.startsWith('END:VEVENT')) {
-                    if (currentEvent) events.push(currentEvent);
+                    if (currentEvent && currentEvent.dateRaw) events.push(currentEvent);
                     currentEvent = null;
                 } else if (currentEvent) {
                     if (line.startsWith('SUMMARY:')) currentEvent.summary = line.substring(8);
-                    if (line.startsWith('DTSTART;VALUE=DATE:')) currentEvent.date = line.substring(19);
-                    if (line.startsWith('DTSTART:')) currentEvent.date = line.substring(8, 16); // Fallback standard
-                    if (line.startsWith('DESCRIPTION:')) currentEvent.desc = line.substring(12);
+                    // Gestione formati data (DTSTART;VALUE=DATE:YYYYMMDD o DTSTART:YYYYMMDD...)
+                    if (line.startsWith('DTSTART')) {
+                        const parts = line.split(':');
+                        if (parts.length > 1) {
+                            currentEvent.dateRaw = parts[1].substring(0, 8); // Prende solo YYYYMMDD
+                        }
+                    }
                 }
             });
 
-            // Ordina per data
-            events.sort((a, b) => (a.date > b.date) ? 1 : -1);
+            // Ordina cronologicamente
+            events.sort((a, b) => a.dateRaw.localeCompare(b.dateRaw));
             renderTable(events);
         }
 
@@ -73,23 +180,47 @@
             tbody.innerHTML = '';
             
             if (events.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="3">Nessun evento trovato.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="2" style="text-align:center;">Nessun evento trovato.</td></tr>';
                 return;
             }
 
+            const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+
             events.forEach(evt => {
-                const row = document.createElement('tr');
+                // Parsing data YYYYMMDD
+                const y = parseInt(evt.dateRaw.substring(0, 4));
+                const m = parseInt(evt.dateRaw.substring(4, 6)) - 1;
+                const d = parseInt(evt.dateRaw.substring(6, 8));
                 
-                // Formatta la data (YYYYMMDD -> DD/MM/YYYY)
-                let dateStr = evt.date || "";
-                if (dateStr.length === 8) {
-                    dateStr = `${dateStr.substring(6,8)}/${dateStr.substring(4,6)}/${dateStr.substring(0,4)}`;
+                const dateObj = new Date(y, m, d);
+                const dayOfWeek = dateObj.getDay(); // 0 = Dom, 6 = Sab
+                
+                const holidayName = checkItalianHoliday(dateObj);
+                const isHoliday = holidayName !== null;
+                const isSunday = dayOfWeek === 0;
+                const isSaturday = dayOfWeek === 6;
+
+                // Determinazione classe CSS
+                let rowClass = '';
+                if (isHoliday) rowClass = 'is-holiday';
+                else if (isSunday) rowClass = 'is-sunday';
+                else if (isSaturday) rowClass = 'is-saturday';
+
+                const row = document.createElement('tr');
+                if (rowClass) row.classList.add(rowClass);
+
+                // Formattazione stringa data
+                const dateString = `${days[dayOfWeek]} ${String(d).padStart(2, '0')}/${String(m + 1).padStart(2, '0')}/${y}`;
+                
+                // Aggiunta nome festività se presente
+                let holidayLabel = '';
+                if (holidayName) {
+                    holidayLabel = `<span class="holiday-name">${holidayName}</span>`;
                 }
 
                 row.innerHTML = `
-                    <td class="date-col">${dateStr}</td>
-                    <td>${evt.summary || 'Senza titolo'}</td>
-                    <td>${evt.desc || ''}</td>
+                    <td class="col-date">${dateString}${holidayLabel}</td>
+                    <td class="col-event">${evt.summary || 'Senza titolo'}</td>
                 `;
                 tbody.appendChild(row);
             });
@@ -102,7 +233,7 @@
                 const text = await response.text();
                 parseICS(text);
             } catch (err) {
-                alert("Impossibile caricare direttamente (probabilmente blocco CORS). Scarica il file e usa il pulsante 'Scegli file'.");
+                alert("Impossibile caricare direttamente (probabilmente blocco CORS). Scarica il file .ics e usa il pulsante 'Scegli file'.");
             }
         }
 
