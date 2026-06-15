@@ -2,475 +2,531 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//WebApp//Generatore Calendario//IT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-0@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260101T080000Z
-DTEND:20260101T090000Z
-SUMMARY:Francobolli commemorativi di Claudio Villa, nel centenario della nascita
-DESCRIPTION:Francobolli commemorativi di Claudio Villa, nel centenario della nascita
+UID:event-excel-1781535041771-0@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobolli commemorativi di Pippo Baudo
+DESCRIPTION:Francobolli commemorativi di Pippo Baudo
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-1@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-1@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicati al Natale e al Santo Natale
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicati al Natale e al Santo Natale
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-2@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati a: Birra Forst, Eureka - macinacaffè, Ferrero, Oro Saiwa, Patatine San Carlo, Saquella caffè, Tonon Arredamenti nel centenario della fondazione, COIN
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati a: Birra Forst, Eureka - macinacaffè, Ferrero, Oro Saiwa, Patatine San Carlo, Saquella caffè, Tonon Arredamenti nel centenario della fondazione, COIN
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-3@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati alle eccellenze della moda: Bottega Veneta, Laura Biagiotti e Acqua di Parma
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati alle eccellenze della moda: Bottega Veneta, Laura Biagiotti e Acqua di Parma
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-4@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al Piano Mattei per l'Africa
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al Piano Mattei per l'Africa
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-5@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato alla Squadra di calcio Fiorentina nel centenario della fondazione
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato alla Squadra di calcio Fiorentina nel centenario della fondazione
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-6@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato alla Squadra vincitrice del Campionato di calcio di serie A
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato alla Squadra vincitrice del Campionato di calcio di serie A
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-7@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Dylan Dog
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Dylan Dog
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-8@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a L'Art Nouveau in Italia
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a L'Art Nouveau in Italia
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-9@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato al Complesso architettonico dell'EUR
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato al Complesso architettonico dell'EUR
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-10@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato alla Cucina Italiana come prima cucina riconosciuta Patrimonio Culturale Immateriale dell'UNESCO
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato alla Cucina Italiana come prima cucina riconosciuta Patrimonio Culturale Immateriale dell'UNESCO
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-11@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato alla Giornata della Filatelia
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato alla Giornata della Filatelia
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-12@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato a Pasta Gragnano IGP
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato a Pasta Gragnano IGP
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-13@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato a Verona Stone District
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato a Verona Stone District
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-14@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato al Salone Nautico Internazionale
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato al Salone Nautico Internazionale
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-15@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20251231T080000Z
+DTEND:20251231T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato al Settore crocieristico e sua filiera
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicato al Settore crocieristico e sua filiera
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-16@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260121T080000Z
 DTEND:20260121T090000Z
 SUMMARY:Francobolli celebrativi dedicati alle Olimpiadi e Paralimpiadi invernali di Milano Cortina 2026
 DESCRIPTION:Francobolli celebrativi dedicati alle Olimpiadi e Paralimpiadi invernali di Milano Cortina 2026
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-2@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-17@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260122T080000Z
 DTEND:20260122T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato all'Accademia di Belle Arti di Brera Milano, nel 250° anniversario della fondazione
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato all'Accademia di Belle Arti di Brera Milano, nel 250° anniversario della fondazione
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato all'Accademia di Belle Arti di "Brera" Milano, nel 250° anniversario della fondazione
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato all'Accademia di Belle Arti di "Brera" Milano, nel 250° anniversario della fondazione
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-3@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260201T080000Z
-DTEND:20260201T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al Piano Mattei per l'Africa
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al Piano Mattei per l'Africa
+UID:event-excel-1781535041771-18@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260129T080000Z
+DTEND:20260129T090000Z
+SUMMARY:Francobolli commemorativi di Claudio Villa, nel centenario della nascita
+DESCRIPTION:Francobolli commemorativi di Claudio Villa, nel centenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-4@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-19@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260205T080000Z
 DTEND:20260205T090000Z
 SUMMARY:Francobolli commemorativi del rientro in patria delle reliquie di Sant'Agata, nel 900° anniversario
 DESCRIPTION:Francobolli commemorativi del rientro in patria delle reliquie di Sant'Agata, nel 900° anniversario
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-5@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-20@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260207T080000Z
 DTEND:20260207T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato alla Giornata nazionale contro il Bullismo ed il Cyberbullismo
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato alla Giornata nazionale contro il Bullismo ed il Cyberbullismo
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato alla Giornata nazionale contro il Bullismo ed il Cyberbullismo
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato alla Giornata nazionale contro il Bullismo ed il Cyberbullismo
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-6@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-21@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260214T080000Z
 DTEND:20260214T090000Z
 SUMMARY:Francobolli commemorativi della Regina Margherita di Savoia, nel centenario della scomparsa
 DESCRIPTION:Francobolli commemorativi della Regina Margherita di Savoia, nel centenario della scomparsa
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-7@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-22@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260216T080000Z
 DTEND:20260216T090000Z
 SUMMARY:Francobolli commemorativi di Piero Gobetti, nel centenario della scomparsa
 DESCRIPTION:Francobolli commemorativi di Piero Gobetti, nel centenario della scomparsa
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-8@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-23@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260220T080000Z
 DTEND:20260220T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a Vittorio Bachelet, nel centenario della nascita
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a Vittorio Bachelet, nel centenario della nascita
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a Vittorio Bachelet, nel centenario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a Vittorio Bachelet, nel centenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-9@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260304T080000Z
-DTEND:20260304T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati a: COIN e La Perla
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati a: COIN e La Perla
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-10@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-24@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260305T080000Z
 DTEND:20260305T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Corriere della Sera, nel 150° anniversario della fondazione
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Corriere della Sera, nel 150° anniversario della fondazione
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Corriere della Sera, nel 150° anniversario della fondazione
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Corriere della Sera, nel 150° anniversario della fondazione
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-11@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-25@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260311T080000Z
 DTEND:20260311T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Enrico Fermi
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Enrico Fermi
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Enrico Fermi - Centenario dei fermioni
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Enrico Fermi - Centenario dei fermioni
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-12@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-26@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260314T080000Z
 DTEND:20260314T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato alla Biblioteca Nazionale Centrale, nel 150° anniversario dell'inaugurazione
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato alla Biblioteca Nazionale Centrale, nel 150° anniversario dell'inaugurazione
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato alla Biblioteca Nazionale Centrale di Roma, nel 150° anniversario dell'inaugurazione
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato alla Biblioteca Nazionale Centrale di Roma, nel 150° anniversario dell'inaugurazione
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-13@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-27@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260324T080000Z
 DTEND:20260324T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Dario Luigi Angelo Fo, nel centenario della nascita
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Dario Luigi Angelo Fo, nel centenario della nascita
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Dario Luigi Angelo Fo, nel centenario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Dario Luigi Angelo Fo, nel centenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-14@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-28@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260325T080000Z
 DTEND:20260325T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato ai 100 anni dell'Istituto di Previdenza dei Giornalisti Italiani (INPGI)
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato ai 100 anni dell'Istituto di Previdenza dei Giornalisti Italiani (INPGI)
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato ai 100 anni dell'Istituto Nazionale di Previdenza dei Giornalisti Italiani "Giovanni Amendola" (INPGI)
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato ai 100 anni dell'Istituto Nazionale di Previdenza dei Giornalisti Italiani "Giovanni Amendola" (INPGI)
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-15@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-29@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260331T080000Z
+DTEND:20260331T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Rocco Petrone, nel centenario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Rocco Petrone, nel centenario della nascita
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-30@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260409T080000Z
 DTEND:20260409T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati alle imprese storiche: Fabbrica d'Armi Pietro Beretta S.p.A., nel 500° anniversario, Rubinetterie Stella, AGIP (ENI), Unoaerre, Acqua S. Bernardo, Officine Egidio Brugola, CISA, Pizzoli, Ducati nel centenario della fondazione e Maserati, nel 100° anniversario del marchio
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati alle imprese storiche: Fabbrica d'Armi Pietro Beretta S.p.A., nel 500° anniversario, Rubinetterie Stella, AGIP (ENI), Unoaerre, Acqua S. Bernardo, Officine Egidio Brugola, CISA, Pizzoli, Ducati nel centenario della fondazione e Maserati, nel 100° anniversario del marchio
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati alle imprese storiche: Fabbrica d'Armi Pietro Beretta S.p.A., nel 500° anniversario, AGIP (ENI), Unoaerre, Acqua S.Bernardo, Officine Egidio Brugola, CISA, Pizzoli, Ducati nel centenario della fondazione e Maserati, nel 100° anniversario del marchio
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati alle imprese storiche: Fabbrica d'Armi Pietro Beretta S.p.A., nel 500° anniversario, AGIP (ENI), Unoaerre, Acqua S.Bernardo, Officine Egidio Brugola, CISA, Pizzoli, Ducati nel centenario della fondazione e Maserati, nel 100° anniversario del marchio
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-16@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-31@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260415T080000Z
 DTEND:20260415T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Enrico Ameri, nel centenario della nascita
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Enrico Ameri, nel centenario della nascita
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Enrico Ameri, nel centenario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Enrico Ameri, nel centenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-17@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-32@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260421T080000Z
 DTEND:20260421T090000Z
 SUMMARY:Francobolli commemorativi di Papa Francesco
 DESCRIPTION:Francobolli commemorativi di Papa Francesco
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-18@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260401T080000Z
-DTEND:20260401T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati alle eccellenze del design: Tonon Arredamenti, nel centenario della fondazione, SNAIDERO, Sedia leggera di Chiavari, nel 200° anniversario
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati alle eccellenze del design: Tonon Arredamenti, nel centenario della fondazione, SNAIDERO, Sedia leggera di Chiavari, nel 200° anniversario
+UID:event-excel-1781535041771-33@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260422T080000Z
+DTEND:20260422T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati alle eccellenze del design: SNAIDERO, Sedia leggera di Chiavari
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati alle eccellenze del design: SNAIDERO, Sedia leggera di Chiavari
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-19@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260501T080000Z
-DTEND:20260501T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica il Patrimonio naturale e paesaggistico dedicato al borgo di Giano dell'Umbria
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica il Patrimonio naturale e paesaggistico dedicato al borgo di Giano dell'Umbria
+UID:event-excel-1781535041771-34@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260505T080000Z
+DTEND:20260505T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Le Passioni degli Italiani - Musica
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Le Passioni degli Italiani - Musica
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-20@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-35@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260506T080000Z
 DTEND:20260506T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al terremoto del Friuli, nel 50° anniversario
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al terremoto del Friuli, nel 50° anniversario
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al terremoto del Friuli, nel 50° anniversario
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al terremoto del Friuli, nel 50° anniversario
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-21@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-36@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260508T080000Z
+DTEND:20260508T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Santo Amato Ronconi nell'800° anniversario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Santo Amato Ronconi nell'800° anniversario della nascita
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-37@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260509T080000Z
 DTEND:20260509T090000Z
 SUMMARY:Francobolli celebrativi di Europa 2026
 DESCRIPTION:Francobolli celebrativi di Europa 2026
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-22@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-38@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260513T080000Z
+DTEND:20260513T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le eccellenze del sistema produttivo e del Made in Italy" dedicato a La Perla
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le eccellenze del sistema produttivo e del Made in Italy" dedicato a La Perla
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-39@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260514T080000Z
 DTEND:20260514T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato al Calendario di Frate Indovino
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato al Calendario di Frate Indovino
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al Corpo di Commissariato Militare Marittimo, nel 150° anniversario
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al Corpo di Commissariato Militare Marittimo, nel 150° anniversario
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-23@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-40@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260514T080000Z
+DTEND:20260514T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato al Calendario di Frate Indovino
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato al Calendario di Frate Indovino
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-41@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260519T080000Z
 DTEND:20260519T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati al settore farmaceutico: Giuliani (Società Farmaceutica italiana), Recordati, nel centenario, Menarini Industrie Farmaceutiche Riunite
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati al settore farmaceutico: Giuliani (Società Farmaceutica italiana), Recordati, nel centenario, Menarini Industrie Farmaceutiche Riunite
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati al settore farmaceutico: Giuliani (Società Farmaceutica italiana), Recordati, nel centenario, Menarini Industrie Farmaceutiche Riunite
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati al settore farmaceutico: Giuliani (Società Farmaceutica italiana), Recordati, nel centenario, Menarini Industrie Farmaceutiche Riunite
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-24@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260601T080000Z
-DTEND:20260601T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica il Patrimonio naturale e paesaggistico Serie Turistica dedicata alle isole minori: Montecristo, Ventotene, Licosa, le isole Tremiti, Isola di Lampedusa, Caprera, Murano
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica il Patrimonio naturale e paesaggistico Serie Turistica dedicata alle isole minori: Montecristo, Ventotene, Licosa, le isole Tremiti, Isola di Lampedusa, Caprera, Murano
+UID:event-excel-1781535041771-42@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260522T080000Z
+DTEND:20260522T090000Z
+SUMMARY:Francobolli celebrativi di L'Aquila Capitale italiana della Cultura 2026
+DESCRIPTION:Francobolli celebrativi di L'Aquila Capitale italiana della Cultura 2026
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-25@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260601T080000Z
-DTEND:20260601T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a Cassa di Risparmio di Roma ora Fondazione, nel 190° anniversario della costituzione
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a Cassa di Risparmio di Roma ora Fondazione, nel 190° anniversario della costituzione
+UID:event-excel-1781535041771-43@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260524T080000Z
+DTEND:20260524T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "il Patrimonio naturale e paesaggistico" dedicati al Comune di Gifflenga, per i 1100 anni di storia e comunità (Gifflenga)
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "il Patrimonio naturale e paesaggistico" dedicati al Comune di Gifflenga, per i 1100 anni di storia e comunità (Gifflenga)
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-26@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260601T080000Z
-DTEND:20260601T090000Z
+UID:event-excel-1781535041771-44@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260525T080000Z
+DTEND:20260525T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "il Patrimonio naturale e paesaggistico" dedicati al borgo di Giano dell'Umbria (Giano dell'Umbria)
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "il Patrimonio naturale e paesaggistico" dedicati al borgo di Giano dell'Umbria (Giano dell'Umbria)
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-45@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260602T080000Z
+DTEND:20260602T090000Z
 SUMMARY:Francobolli celebrativi del voto alle donne
 DESCRIPTION:Francobolli celebrativi del voto alle donne
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-27@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260601T080000Z
-DTEND:20260601T090000Z
-SUMMARY:Francobolli celebrativi della proclamazione della Repubblica Italiana, 80° anniversario
-DESCRIPTION:Francobolli celebrativi della proclamazione della Repubblica Italiana, 80° anniversario
+UID:event-excel-1781535041771-46@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260602T080000Z
+DTEND:20260602T090000Z
+SUMMARY:Francobolli celebrativi della proclamazione della Repubblica Italiana, nell'80° anniversario
+DESCRIPTION:Francobolli celebrativi della proclamazione della Repubblica Italiana, nell'80° anniversario
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-28@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260607T080000Z
-DTEND:20260607T090000Z
-SUMMARY:Francobolli commemorativi di Pippo Baudo
-DESCRIPTION:Francobolli commemorativi di Pippo Baudo
+UID:event-excel-1781535041771-47@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260605T080000Z
+DTEND:20260605T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato all'anniversario dell'Arma dei Carabinieri
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato all'anniversario dell'Arma dei Carabinieri
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-29@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260701T080000Z
-DTEND:20260701T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a L'Art Nouveau in Italia
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a L'Art Nouveau in Italia
+UID:event-excel-1781535041771-48@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260616T080000Z
+DTEND:20260616T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a ASI - Automotoclub Storico Italiano
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a ASI - Automotoclub Storico Italiano
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-30@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260701T080000Z
-DTEND:20260701T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato al Settore crocieristico e sua filiera
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato al Settore crocieristico e sua filiera
+UID:event-excel-1781535041771-49@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260618T080000Z
+DTEND:20260618T090000Z
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "il Patrimonio naturale e paesaggistico" - Serie Turistica dedicata alle isole minori: Montecristo, Ventotene, Licosa, le isole Tremiti, Isola di Lampedusa, Caprera, Murano
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "il Patrimonio naturale e paesaggistico" - Serie Turistica dedicata alle isole minori: Montecristo, Ventotene, Licosa, le isole Tremiti, Isola di Lampedusa, Caprera, Murano
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-31@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-50@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20260620T080000Z
+DTEND:20260620T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a Cassa di Risparmio di Roma ora Fondazione Roma, nel 190° anniversario della costituzione
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a Cassa di Risparmio di Roma ora Fondazione Roma, nel 190° anniversario della costituzione
+END:VEVENT
+BEGIN:VEVENT
+UID:event-excel-1781535041771-51@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260707T080000Z
 DTEND:20260707T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati a: Azienda Santoni, Ricetta originale dell'Aceto Balsamico Tradizionale di Modena nel 60° anniversario della costituzione della Consorteria, Sofidel marchio Regina, Amplifon, Layla Cosmetics, Scandalli Fisarmoniche, Danieli Officine Meccaniche
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati a: Azienda Santoni, Ricetta originale dell'Aceto Balsamico Tradizionale di Modena nel 60° anniversario della costituzione della Consorteria, Sofidel marchio Regina, Amplifon, Layla Cosmetics, Scandalli Fisarmoniche, Danieli Officine Meccaniche
+SUMMARY:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati a: Azienda Santoni, Ricetta originale dell'Aceto Balsamico Tradizionale di Modena nel 60° anniversario della costituzione della Consorteria, Sofidel marchio Regina, Amplifon, Layla Cosmetics, Scandalli Fisarmoniche, Danieli Officine Meccaniche, Rubinetterie Stella
+DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica "le Eccellenze del sistema produttivo e del Made in Italy" dedicati a: Azienda Santoni, Ricetta originale dell'Aceto Balsamico Tradizionale di Modena nel 60° anniversario della costituzione della Consorteria, Sofidel marchio Regina, Amplifon, Layla Cosmetics, Scandalli Fisarmoniche, Danieli Officine Meccaniche, Rubinetterie Stella
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-32@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-52@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260710T080000Z
 DTEND:20260710T090000Z
 SUMMARY:Francobolli commemorativi di Vittorio Occorsio, nel 50° anniversario della sua scomparsa
 DESCRIPTION:Francobolli commemorativi di Vittorio Occorsio, nel 50° anniversario della sua scomparsa
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-33@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-53@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260719T080000Z
 DTEND:20260719T090000Z
-SUMMARY:Francobolli commemorativi della Campana dei Caduti Maria Dolens di Rovereto
-DESCRIPTION:Francobolli commemorativi della Campana dei Caduti Maria Dolens di Rovereto
+SUMMARY:Francobolli commemorativi della Campana dei Caduti - Maria Dolens di Rovereto
+DESCRIPTION:Francobolli commemorativi della Campana dei Caduti - Maria Dolens di Rovereto
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-34@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-54@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260728T080000Z
 DTEND:20260728T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato al 50° anniversario delle radio e tv locali
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato al 50° anniversario delle radio e tv locali
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato al 50° anniversario delle radio e tv locali
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato al 50° anniversario delle radio e tv locali
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-35@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-55@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260808T080000Z
 DTEND:20260808T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a INFN Istituto Nazionale di Fisica Nucleare
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a INFN Istituto Nazionale di Fisica Nucleare
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a INFN - Istituto Nazionale di Fisica Nucleare
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a INFN - Istituto Nazionale di Fisica Nucleare
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-36@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-56@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260821T080000Z
 DTEND:20260821T090000Z
 SUMMARY:Francobolli celebrativi dei XX Giochi del Mediterraneo (Taranto 2026)
 DESCRIPTION:Francobolli celebrativi dei XX Giochi del Mediterraneo (Taranto 2026)
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-37@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-57@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260828T080000Z
 DTEND:20260828T090000Z
 SUMMARY:Francobolli commemorativi di Enrico Veschi, nel centenario della nascita
 DESCRIPTION:Francobolli commemorativi di Enrico Veschi, nel centenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-38@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260901T080000Z
-DTEND:20260901T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati al settore enogastronomico: Ferrero, Oro Saiwa, Birra Forst, Patatine San Carlo, Eureka - macinacaffè, Saquella caffè
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati al settore enogastronomico: Ferrero, Oro Saiwa, Birra Forst, Patatine San Carlo, Eureka - macinacaffè, Saquella caffè
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-39@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260901T080000Z
-DTEND:20260901T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato a Pasta Gragnano IGP
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato a Pasta Gragnano IGP
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-40@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-58@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260904T080000Z
 DTEND:20260904T090000Z
 SUMMARY:Francobolli commemorativi di Giorgio Armani
 DESCRIPTION:Francobolli commemorativi di Giorgio Armani
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-41@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260901T080000Z
-DTEND:20260901T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato a Verona Stone District
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato a Verona Stone District
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-42@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-59@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260923T080000Z
 DTEND:20260923T090000Z
 SUMMARY:Francobolli commemorativi di Claudia Cardinale
 DESCRIPTION:Francobolli commemorativi di Claudia Cardinale
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-43@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260923T080000Z
-DTEND:20260923T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al Corpo di Commissariato Militare Marittimo, nel 150° anniversario
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al Corpo di Commissariato Militare Marittimo, nel 150° anniversario
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-44@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20260901T080000Z
-DTEND:20260901T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato al Salone Nautico Internazionale
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicato al Salone Nautico Internazionale
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-45@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-60@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20260929T080000Z
 DTEND:20260929T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a CGIL
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a CGIL
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a CGIL
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a CGIL
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-46@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261001T080000Z
-DTEND:20261001T090000Z
-SUMMARY:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati alle eccellenze della moda: Bottega Veneta, Laura Biagiotti e Acqua di Parma
-DESCRIPTION:Francobolli ordinari appartenenti alla serie tematica le Eccellenze del sistema produttivo e del Made in Italy dedicati alle eccellenze della moda: Bottega Veneta, Laura Biagiotti e Acqua di Parma
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-47@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261001T080000Z
-DTEND:20261001T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato alla Giornata della Filatelia
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato alla Giornata della Filatelia
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-48@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261001T080000Z
-DTEND:20261001T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Dylan Dog
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Dylan Dog
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-49@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-61@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20261003T080000Z
 DTEND:20261003T090000Z
-SUMMARY:Francobolli commemorativi di San Francesco d'Assisi, nell' 800° anniversario della scomparsa, e Cantico delle Creature
-DESCRIPTION:Francobolli commemorativi di San Francesco d'Assisi, nell' 800° anniversario della scomparsa, e Cantico delle Creature
+SUMMARY:Francobolli commemorativi di San Francesco d'Assisi, nell'800° anniversario della scomparsa, e Cantico delle Creature
+DESCRIPTION:Francobolli commemorativi di San Francesco d'Assisi, nell'800° anniversario della scomparsa, e Cantico delle Creature
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-50@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261026T080000Z
-DTEND:20261026T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al Comando Carabinieri Tutela del Lavoro, nel centenario dell'istituzione
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato al Comando Carabinieri Tutela del Lavoro, nel centenario dell'istituzione
+UID:event-excel-1781535041771-62@ical.local
+DTSTAMP:20260615T145041Z
+DTSTART:20261027T080000Z
+DTEND:20261027T090000Z
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al Comando Carabinieri Tutela del Lavoro, nel centenario dell'istituzione
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato al Comando Carabinieri Tutela del Lavoro, nel centenario dell'istituzione
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-51@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-63@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20261117T080000Z
 DTEND:20261117T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a Rosario Berardi, nel centenario della nascita
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica i Valori sociali dedicato a Rosario Berardi, nel centenario della nascita
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a Rosario Berardi, nel centenario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "i Valori sociali" dedicato a Rosario Berardi, nel centenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-52@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-64@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20261124T080000Z
 DTEND:20261124T090000Z
 SUMMARY:Francobolli commemorativi di Carlo Lorenzini Collodi, nel bicentenario della nascita
 DESCRIPTION:Francobolli commemorativi di Carlo Lorenzini Collodi, nel bicentenario della nascita
 END:VEVENT
 BEGIN:VEVENT
-UID:event-excel-1768233436162-53@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261201T080000Z
-DTEND:20261201T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato al Complesso architettonico dell'EUR
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato al Complesso architettonico dell'EUR
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-54@ical.local
-DTSTAMP:20260112T155716Z
+UID:event-excel-1781535041771-65@ical.local
+DTSTAMP:20260615T145041Z
 DTSTART:20261202T080000Z
 DTEND:20261202T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Filippo Tommaso Marinetti, nel 150° anniversario della nascita
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Filippo Tommaso Marinetti, nel 150° anniversario della nascita
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-55@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261231T080000Z
-DTEND:20261231T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a San Amato Ronconi 800° anniversario della nascita
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a San Amato Ronconi 800° anniversario della nascita
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-56@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261231T080000Z
-DTEND:20261231T090000Z
-SUMMARY:Francobolli celebrativi di L'Aquila città della Cultura 2026
-DESCRIPTION:Francobolli celebrativi di L'Aquila città della Cultura 2026
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-57@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261231T080000Z
-DTEND:20261231T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a ASI Automotoclub Storico Italiano
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a ASI Automotoclub Storico Italiano
-END:VEVENT
-BEGIN:VEVENT
-UID:event-excel-1768233436162-58@ical.local
-DTSTAMP:20260112T155716Z
-DTSTART:20261231T080000Z
-DTEND:20261231T090000Z
-SUMMARY:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Le Passioni degli Italiani - Musica
-DESCRIPTION:Francobollo ordinario appartenente alla serie tematica le Eccellenze del Patrimonio culturale italiano dedicato a Le Passioni degli Italiani - Musica
+SUMMARY:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Filippo Tommaso Marinetti, nel 150° anniversario della nascita
+DESCRIPTION:Francobollo ordinario appartenente alla serie tematica "le Eccellenze del Patrimonio culturale italiano" dedicato a Filippo Tommaso Marinetti, nel 150° anniversario della nascita
 END:VEVENT
 END:VCALENDAR
